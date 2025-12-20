@@ -21,6 +21,17 @@ body {
 }
 
 /* LOGO */
+.logo {
+  position: relative;
+  z-index: 10;
+}
+
+.logo img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
 .logo-wrapper {
   position: absolute;
   top: 40px;
@@ -43,6 +54,7 @@ body {
     radial-gradient(circle at right, rgba(128,0,255,.25), transparent 60%),
     linear-gradient(135deg, #12051f, #0b0614);
   overflow: hidden;
+  
 }
 
 .hero-content {
@@ -189,6 +201,22 @@ body {
   }
 }
 
+@media (max-width: 768px) {
+  .logo {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 90px;        /* LOGO LEBIH KECIL */
+  }
+
+  .logo img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+}
+
+
 /* ABOUT SECTION */
 .about-section {
   padding: 100px 80px;
@@ -321,19 +349,24 @@ body {
   margin-bottom: 60px;
 }
 
+/* LOGO CIRCLE BASE (DESKTOP TETAP) */
 .logo-circle {
   width: 160px;
-  height: 160px;
+  aspect-ratio: 1 / 1; /* PENTING: selalu bulat */
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
+/* LOGO IMAGE */
 .logo-circle img {
-  width: 90px;
-  height: auto;
+  width: 65%;
+  height: 65%;
+  object-fit: contain; /* ANTI GEPENG */
+  display: block;
 }
+
 
 /* LOGO BACKGROUNDS */
 .logo-circle.yellow {
@@ -391,21 +424,25 @@ body {
     padding: 60px 20px;
   }
 
-  .brand-logos {
-    gap: 32px;
+   .brand-logos {
+    flex-direction: column;   /* SUSUN KE BAWAH */
+    gap: 24px;
   }
 
   .logo-circle {
-    width: 110px;
-    height: 110px;
+    width: 140px;
+    margin: 0 auto;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.35);
   }
 
   .logo-circle img {
-    width: 60px;
+    width: 70%;
+    height: 70%;
   }
 
   .brand-colors {
-    height: 48px;
+    margin-top: 40px;
+    height: 44px;
   }
 }
 
