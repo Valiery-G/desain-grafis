@@ -54,7 +54,8 @@ body {
     radial-gradient(circle at right, rgba(128,0,255,.25), transparent 60%),
     linear-gradient(135deg, #12051f, #0b0614);
   overflow: hidden;
-  
+    position: relative;
+
 }
 
 .hero-content {
@@ -202,19 +203,27 @@ body {
 }
 
 @media (max-width: 768px) {
-  .logo {
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    width: 90px;        /* LOGO LEBIH KECIL */
+  .hero .logo-wrapper {
+    position: absolute !important;
+    top: 14px !important;
+    left: 14px !important;
+
+    width: 70px !important;   /* KECIL */
+    margin: 0 !important;
+    padding: 0 !important;
+
+    transform: none !important;
+    z-index: 999 !important;
   }
 
-  .logo img {
-    width: 100%;
-    height: auto;
-    object-fit: contain;
+  .hero .logo-wrapper img {
+    width: 100% !important;
+    height: auto !important;
+    object-fit: contain !important;
+    display: block !important;
   }
 }
+
 
 
 /* ABOUT SECTION */
